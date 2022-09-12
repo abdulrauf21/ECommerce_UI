@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/utils/app_constants.dart';
 
 class WalletPage extends StatelessWidget {
   const WalletPage({Key? key}) : super(key: key);
@@ -188,7 +189,7 @@ class WalletPage extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 18),
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              itemCount: 10,
+              itemCount: 9,
               gridDelegate:
                   SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,
                   childAspectRatio: (MediaQuery.of(context).size.width /2)/216,
@@ -196,13 +197,38 @@ class WalletPage extends StatelessWidget {
                   mainAxisSpacing: 10,
                   ),
               itemBuilder: (context, index) {
-                return Column(
-                  children: [
-                    Container(
-                      height: 156,
-                      color: Colors.grey
-                    )
-                  ],
+                return Container(
+                 
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(7),
+                        width: double.infinity,
+                        height: 156,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFEFEFEF),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          children: [
+                            Align(
+                                alignment: Alignment.topRight,
+                                child: Icon(Icons.favorite)),
+                            Image.asset(
+                              products[index]["image"]!,
+                              height: 116,
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 3,
+                      ),
+                      Text(products[index]["name"]!),
+                      Text(products[index]["price"]!),
+                    ],
+                  ),
                 );
               }
             )

@@ -1,9 +1,5 @@
 List<Map<String, String>> products = [
-      {
-        "image": "assets/PicsForUI/shoe_yellow.png",
-        "name": "NIKE Metcon X",
-        "price": "\$120.99",
-      },
+     
       {
         "image": "assets/PicsForUI/shoe_green.png",
         "name": "Nike Air Presto",
@@ -44,5 +40,9 @@ List<Map<String, String>> products = [
         "name": "Nike Air Presto",
         "price": "\$132.99",
       },
-      
+       {
+        "image": "assets/PicsForUI/shoe_yellow.png",
+        "name": "NIKE Metcon X",
+        "price": "\$120.99",
+      },
     ];

@@ -38,6 +38,7 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
+        SizedBox(height: 15,),
         Expanded(
           child: GridView.builder(
               itemCount: products.length,
